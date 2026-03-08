@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Admin Dashboard | FoxDigital</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body>
+<header class="site-header"><nav class="container nav"><a class="brand" href="index.html">FoxDigital <span>Services</span></a><button class="menu-toggle">☰</button><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="process.html">Process</a></li><li><a href="contact.html">Contact</a></li><li><a href="admin-dashboard.html">Admin</a></li><li><a href="client-login.html">Client</a></li></ul></nav></header>
+<section class="section"><div class="container"><div class="flex" style="justify-content:space-between;align-items:center;"><div><p class="eyebrow">Secure Area</p><h1>Admin Dashboard</h1></div><button id="adminLogout" class="btn btn-outline" style="color:#10213d;border-color:#c9d6f4;">Logout</button></div>
+<div class="dashboard-layout">
+<div class="panel" style="padding:1rem;">
+<h3>Form Submissions</h3>
+<div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Service</th><th>Date</th><th>Status</th></tr></thead><tbody id="submissionRows"></tbody></table></div>
+</div>
+<div class="panel" style="padding:1rem;">
+<h3>Create / Update Client Report</h3>
+<form id="reportForm">
+<label>Client ID<input name="clientId" required placeholder="client-demo"></label>
+<label>Client Password<input name="password" required></label>
+<label>Client Name<input name="name" required></label>
+<label>Website<input name="website"></label>
+<label>Leads<input name="leads" type="number" min="0" required></label>
+<label>ROAS<input name="roas" type="number" step="0.1" min="0" required></label>
+<label>CTR (%)<input name="ctr" type="number" step="0.1" min="0" required></label>
+<label>Ad Spend ($)<input name="spend" type="number" step="0.01" min="0" required></label>
+<label>Summary / Notes<textarea name="notes" rows="3"></textarea></label>
+<label>Upload Report PDF/DOC<input name="reportFile" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></label>
+<button class="btn btn-primary" type="submit">Save Report</button>
+<p id="reportMsg" class="msg"></p>
+</form>
+</div>
+</div></div></section>
+<footer><div class="container footer"><p>© <span id="year"></span> FoxDigital Services.</p><a href="client-dashboard.html">Open Client Dashboard</a></div></footer>
+<script src="app.js"></script><script src="admin-dashboard.js"></script></body></html>
